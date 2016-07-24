@@ -1,0 +1,54 @@
+{
+  "name": "electron-quick-start",
+  "version": "1.0.0",
+  "description": "A minimal Electron React Typescript application",
+  "main": "app/main",
+  "scripts": {
+    "start": "electron app/main",
+    "clean": "rimraf app && rimraf test",
+    "linkelectron": "ln -sf \"$(pwd)/node_modules/electron-prebuilt\" node_modules/electron",
+    "unlinkelectron": "rimraf node_modules/electron",
+    "pretest": "npm run linkelectron && npm run clean && npm run build-tests",
+    "posttest": "npm run unlinkelectron",
+    "prestart": "npm run clean && npm run build",
+    "build": "tsc -p app_src --outDir app",
+    "build:watch": "tsc -p app_src --outDir app -w",
+    "build-tests": "tsc -p test_src --outDir test",
+    "build-tests:watch": "tsc -p test_src --outDir test -w",
+    "test:fast": "npm run build-tests && mocha --recursive test/**/*.tests.js",
+    "test": "mocha --recursive test/**/*.tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/electron/electron-quick-start.git"
+  },
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/electron/electron-quick-start/issues"
+  },
+  "homepage": "https://github.com/electron/electron-quick-start#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "electron-prebuilt": "^1.2.0",
+    "jsdom": "^9.4.1",
+    "mocha": "^2.5.3",
+    "react-addons-test-utils": "^15.2.1",
+    "rimraf": "^2.5.4",
+    "tslint": "^3.13.0",
+    "tslint-react": "^0.4.0",
+    "typescript": "^1.8.10",
+    "typings": "^1.3.2"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "react": "^15.2.1",
+    "react-dom": "^15.2.1"
+  }
+}

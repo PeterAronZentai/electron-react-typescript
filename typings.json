@@ -1,0 +1,12 @@
+{
+  "globalDependencies": {
+    "chai": "registry:dt/chai#3.4.0+20160601211834",
+    "classnames": "registry:dt/classnames#0.0.0+20160316155526",
+    "github-electron": "registry:dt/github-electron#1.2.7+20160724065513",
+    "mocha": "registry:dt/mocha#2.2.5+20160720003353",
+    "node": "registry:dt/node#6.0.0+20160720070758",
+    "react": "registry:dt/react#0.14.0+20160720060442",
+    "react-addons-test-utils": "registry:dt/react-addons-test-utils#0.14.0+20160427035638",
+    "react-dom": "registry:dt/react-dom#0.14.0+20160412154040"
+  }
+}
